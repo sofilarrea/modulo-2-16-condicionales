@@ -212,22 +212,51 @@ function obtenerSensacion(temperatura) {
 // 10	Excelente
 // Menor a 0 o mayor a 10	Puntaje inválido
 
-function obtenerNota(puntaje){
+// function obtenerNota(puntaje){
+//   let string;
+//   if (puntaje < 6){
+//     string = "Desaprobado"
+//   } else if (puntaje >= 6 && puntaje <= 7){
+//     string = "Regunlar"
+//   } else if (puntaje >=7 && puntaje <= 8){
+//     string = "Bueno"
+//   } else if (puntaje >= 8 && puntaje <= 9){
+//     string = "Muy bueno"
+//   } else if (puntaje === 10){
+//     string = "Excelente"
+//   } else {
+//     string = "Puntaje Inválido"
+//   }
+//   return string
+// }
+// console.log(obtenerNota(0));
+// console.log(obtenerNota(8));
+
+
+function onbtenerNota(puntaje){
   let string;
-  if (puntaje < 6){
-    string = "Desaprobado"
-  } else if (puntaje >= 6 && puntaje <= 7){
-    string = "Regunlar"
-  } else if (puntaje >=7 && puntaje <= 8){
-    string = "Bueno"
-  } else if (puntaje >= 8 && puntaje <= 9){
-    string = "Muy bueno"
-  } else if (puntaje === 10){
-    string = "Excelente"
-  } else {
-    string = "Puntaje Inválido"
+  switch (true) {
+    case puntaje < 6:
+      string = "Desaprobaste"
+      break;
+      case puntaje >= 6 && puntaje <= 7:
+        string = "Regular"
+        break;
+        case puntaje >=7 && puntaje <= 8:
+          string = "Bueno"
+          break;
+          case
+          puntaje >= 8 && puntaje <= 9:
+            string = "Muy Bueno"
+            break;
+            case puntaje === 10:
+              string = "Excelente"
+              break;
+                default:
+                  string = "Ingresa un puntaje válido"
+                  break;
   }
   return string
 }
-console.log(obtenerNota(0));
-console.log(obtenerNota(8));
+console.log(onbtenerNota(10))
+console.log(onbtenerNota(0))
