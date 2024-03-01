@@ -200,4 +200,34 @@ function obtenerSensacion(temperatura) {
   }
   return mensaje
 }
-console.log(obtenerSensacion(38));
+// console.log(obtenerSensacion(38));
+
+// Crear una función obtenerNota que tome como argumento un número puntaje y devuelva un string dependiendo del puntaje redondeado, con las siguientes reglas:
+
+// Puntaje	Nota
+// Menor a 6	Desaprobado
+// Mayor o igual a 6 y menor a 7	Regular
+// Mayor o igual a 7 y menor a 8	Bueno
+// Mayor o igual a entre 8 y menor a 10	Muy bueno
+// 10	Excelente
+// Menor a 0 o mayor a 10	Puntaje inválido
+
+function obtenerNota(puntaje){
+  let string;
+  if (puntaje < 6){
+    string = "Desaprobado"
+  } else if (puntaje >= 6 && puntaje <= 7){
+    string = "Regunlar"
+  } else if (puntaje >=7 && puntaje <= 8){
+    string = "Bueno"
+  } else if (puntaje >= 8 && puntaje <= 9){
+    string = "Muy bueno"
+  } else if (puntaje === 10){
+    string = "Excelente"
+  } else {
+    string = "Puntaje Inválido"
+  }
+  return string
+}
+console.log(obtenerNota(0));
+console.log(obtenerNota(8));
