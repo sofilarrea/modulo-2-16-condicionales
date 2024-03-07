@@ -42,7 +42,7 @@ function esVocal(letra){
     }
     else {
         return false
-    }   
+    }
 }
 
 // console.log(esVocal("a"))
@@ -56,7 +56,7 @@ function esConsonante(letra){
     }
     else {
         return true
-    }   
+    }
 }
 
 // console.log(esConsonante("a"))
@@ -139,13 +139,124 @@ function obtenerDiasMes(mes) {
     } else if (mes === 'abril' || mes === 'junio' || mes === 'septiembre' || mes === 'noviembre') {
         return 30;
     } else if (mes === 'febrero') {
-        return 28; 
+        return 28;
     } else {
         return 'Mes no válido';
     }
 }
 
-// console.log(obtenerDiasMes('febrero')); 
-// console.log(obtenerDiasMes('septiembre')); 
-// console.log(obtenerDiasMes('diciembre')); 
-// console.log(obtenerDiasMes('febrer')); 
+// console.log(obtenerDiasMes('febrero'));
+// console.log(obtenerDiasMes('septiembre'));
+// console.log(obtenerDiasMes('diciembre'));
+// console.log(obtenerDiasMes('febrer'));
+
+// Crear una función obtenerGeneracion que tome como argumento un número anioNacimiento y devuelva un string con la generación a la que pertenece, siguientdo estas reglas:
+
+// Generación	Años de nacimiento
+// Baby boomer	1949-1968
+// Generación X	1969-1980
+// Millennials	1981-1993
+// Generación Z	1994-2010
+//
+function obtenerGeneracion(edad) {
+  let generacion;
+
+  if (edad >= 1949 && edad <= 1968) {
+      generacion = "Baby Boomer";
+  } else if (edad >= 1969 && edad <= 1980) {
+      generacion = "Generation X";
+  } else if (edad >= 1981 && edad <= 1993) {
+      generacion = "Millennial";
+  } else if (edad >= 1994 && edad <= 2010) {
+      generacion = "Generation Z";
+  } else {
+      generacion = "Too young!";
+  }
+
+  return "You are a " + generacion;
+}
+// console.log(obtenerGeneracion(1955))
+
+// Crear una función obtenerSensacion que tome como argumento un número temperatura y devuelva un string dependiendo de la temperatura, con las siguientes reglas:
+//Temperatura	Mensaje
+// Menor a 0°	¡Está helando!
+// Mayor o igual a 0° y menor a 15°	¡Hace frío!
+// Mayor o igual a 15° y menor a 25°	Está lindo
+// Mayor o igual a entre 25° y menor a 30°	Hace calor
+// Mayor o igual de 30°	¡Hace mucho calor!
+
+function obtenerSensacion(temperatura) {
+  let mensaje;
+  if (temperatura === 0){
+    mensaje = "¡Está Helando!"
+  } else if (temperatura >= 0 && temperatura <= 15){
+    mensaje = "Está Lindo"
+  } else if (temperatura >= 15 && temperatura < 30){
+    mensaje = "Hace calor"
+  } else if (temperatura >= 30){
+    mensaje = "Hace demasiado calor!"
+  } else {
+    return "Ingresá una temperatura válida"
+  }
+  return mensaje
+}
+// console.log(obtenerSensacion(38));
+
+// Crear una función obtenerNota que tome como argumento un número puntaje y devuelva un string dependiendo del puntaje redondeado, con las siguientes reglas:
+
+// Puntaje	Nota
+// Menor a 6	Desaprobado
+// Mayor o igual a 6 y menor a 7	Regular
+// Mayor o igual a 7 y menor a 8	Bueno
+// Mayor o igual a entre 8 y menor a 10	Muy bueno
+// 10	Excelente
+// Menor a 0 o mayor a 10	Puntaje inválido
+
+// function obtenerNota(puntaje){
+//   let string;
+//   if (puntaje < 6){
+//     string = "Desaprobado"
+//   } else if (puntaje >= 6 && puntaje <= 7){
+//     string = "Regunlar"
+//   } else if (puntaje >=7 && puntaje <= 8){
+//     string = "Bueno"
+//   } else if (puntaje >= 8 && puntaje <= 9){
+//     string = "Muy bueno"
+//   } else if (puntaje === 10){
+//     string = "Excelente"
+//   } else {
+//     string = "Puntaje Inválido"
+//   }
+//   return string
+// }
+// console.log(obtenerNota(0));
+// console.log(obtenerNota(8));
+
+
+function onbtenerNota(puntaje){
+  let string;
+  switch (true) {
+    case puntaje < 6:
+      string = "Desaprobaste"
+      break;
+      case puntaje >= 6 && puntaje <= 7:
+        string = "Regular"
+        break;
+        case puntaje >=7 && puntaje <= 8:
+          string = "Bueno"
+          break;
+          case
+          puntaje >= 8 && puntaje <= 9:
+            string = "Muy Bueno"
+            break;
+            case puntaje === 10:
+              string = "Excelente"
+              break;
+                default:
+                  string = "Ingresa un puntaje válido"
+                  break;
+  }
+  return string
+}
+console.log(onbtenerNota(10))
+console.log(onbtenerNota(0))
