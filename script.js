@@ -39,3 +39,25 @@
 // function cambiarColorDeFondo(colorHexadecimal){
 //     document.body.style.backgroundColor = colorHexadecimal;
 // }
+
+// rgb
+//Hacer un programa que al iniciarse pida mediante tres prompts ingresar los valores correspondientes a un color en sistema rgb, y una vez ingresado ponga el color de fondo del body con dicho color. Los valores van del 0 al 255 y corresponden a rojo, verde y azul. //
+
+document.addEventListener("DOMContentLoaded", function () {
+    let colorUno = prompt("Ingresá el valor del color rojo (entre 0 y 255)");
+    let colorDos = prompt("Ingresá el valor del color verde (entre 0 y 255)");
+    let colorTres = prompt("Ingresá el valor del color azul (entre 0 y 255)");
+
+    // Validar si los valores son válidos (entre 0 y 255) y si el usuario ha ingresado algo
+    if (colorUno !== null && colorDos !== null && colorTres !== null &&
+        !isNaN(colorUno) && !isNaN(colorDos) && !isNaN(colorTres) &&
+        colorUno >= 0 && colorUno <= 255 &&
+        colorDos >= 0 && colorDos <= 255 &&
+        colorTres >= 0 && colorTres <= 255) {
+        
+        let colorTotal = "rgb(" + colorUno + ", " + colorDos + ", " + colorTres + ")";
+        document.body.style.backgroundColor = colorTotal;
+    } else {
+        alert("Los valores ingresados no son válidos. Se utilizará el color por defecto.");
+    }
+});
