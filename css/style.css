@@ -13,7 +13,7 @@
     height: auto; 
 }
 
-* {
+
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -71,16 +71,10 @@
 
     }
     
-#card h1 {
-        font-family: "Boohong";
-        color: #ffafcc;
-        font-size: 1.8rem;
-        margin: 50px auto;
-        text-shadow: black 1px 1px 1px;
-    }
-#title__card{
+
+#titulo{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 1rem;
+    font-size: 2rem;
     color: withe;
     justify-self: center;
     align-self: center;
@@ -96,17 +90,15 @@
     margin: 10px;
     margin-bottom: 20px;
 }
-#link__card{
+#link{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 1rem;
     color: white;
     justify-self: center;
     align-self: center;
     margin: 10px;
-    padding: 10px;
-    background-color: #ffafcc;
-    border-radius: 10px;
+        
     border: none;
-    box-shadow: 1px 1px 1px 0.5px #66067990;
+   
     text-decoration: none;
 }

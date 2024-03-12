@@ -13,9 +13,9 @@ imagen.src = promptImagen;
 link.href =promptLink;
 
 
-console.log(promptTitulo === ""); // no dejo espacio porque si pongo espacio es un string y me va a permitir poner enter
+console.log(promptTitulo === ""); // no dejo espacio porque si tengo espacio es un string y me va a permitir poner enter
 if (promptTitulo === "") { 
-alert("escribe un titulo por favor"); 
+alert("Escribe un titulo por favor"); 
 }if (promptImagen === "") { 
 alert("url invalida"); 
 }if (promptLink === "") { 
