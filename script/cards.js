@@ -1,22 +1,23 @@
-titulo = document.getElementById("titulo"); 
+let titulo = document.getElementById("titulo"); 
 let imagen = document.getElementById("imagen"); 
 let link = document.getElementById("link"); 
 
 
-let milanesaTitulo = prompt("ingrese un titulo"); 
-let milanesaImagen = prompt("ingrese url de una imagen"); 
-let milanesaLink = prompt("ingrese link del articulo");
+let promptTitulo = prompt("ingrese un titulo"); 
+let promptImagen = prompt("ingrese url de una imagen"); 
+let promptLink = prompt("ingrese link del articulo");
 
-titulo.textContent = milanesaTitulo; 
-imagen.src = milanesaImagen; 
-link.href = milanesaLink; 
+// Acceder al contenido texto textcontent
+titulo.textContent = promptTitulo;
+imagen.src = promptImagen;
+link.href =promptLink;
 
 
-console.log(milanesaTitulo === ""); 
-if (milanesaTitulo === "") { 
+console.log(promptTitulo === ""); // no dejo espacio porque si pongo espacio es un string y me va a permitir poner enter
+if (promptTitulo === "") { 
 alert("escribe un titulo por favor"); 
-}if (milanesaImagen === "") { 
+}if (promptImagen === "") { 
 alert("url invalida"); 
-}if (milanesaLink === "") { 
+}if (promptLink === "") { 
 alert("link invalida"); 
 } 
