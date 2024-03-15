@@ -100,15 +100,28 @@ console.log(capitalizar('había una vez...'))
 
 // aHackerSpeak(str)
 // Crear una función aHackerSpeak que tome como argumento un string str y el mismo string convertido a H4CK3R 5P3AK, siguiendo las siguientes reglas:
-
 // - Las i se transforman en 1
 // - Las e se transforman en 3
 // - Las a se transforman en 4
 // - Las s se transforman en 5
 // - Las 0 se transforman en 0
-// aHackerSpeak('javascript') // 'j4v45cr1pt'
-// aHackerSpeak('soy una hacker') // '50y un4 h4ck3r'
-// aHackerSpeak('ADA LOVELACE') // '4D4 L0V3L4C3'
+function aHackerSpeak(str){
+    let hacker = str.replace(/i/gi, '1')
+    .replace(/e/gi, '3')
+    .replace(/a/gi, '4')
+    .replace(/s/gi, '5')
+    .replace(/o/gi, '0');
+
+return hacker;
+
+}
+
+console.log(aHackerSpeak('javascript')); // 'j4v45cr1pt'
+console.log(aHackerSpeak('soy una hacker')); // '50y un4 h4ck3r'
+console.log(aHackerSpeak('ADA LOVELACE')); // '4D4 L0V3L4C3'
+
+
+
 // obtenerPrimeraOracion(str)
 // Crear una función obtenerPrimeraOracion que tome como argumento un string str y la primera oración de dicho string
 
