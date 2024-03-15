@@ -8,43 +8,71 @@ function tienenMismaLongitud(a, b){
     }
 }
 
-console.log(tienenMismaLongitud('javascript', 'java')); // false
-console.log(tienenMismaLongitud('manzana', 'cerveza')); // true
+// console.log(tienenMismaLongitud('javascript', 'java')); // false
+// console.log(tienenMismaLongitud('manzana', 'cerveza')); // true
 
 
 // esUltimoCaracter(palabra, caracter)
 // Crear una función esUltimoCaracter que tome como argumentos una palabra y un caracter y devuelva true si la palabra termina con el caracter o false de lo contrario 
 
+function esUltimoCaracter (palabra, caracter){
+    return palabra.endsWith(caracter);
+ }
 
+// console.log(esUltimoCaracter('lovelace', 'e') // true
+// )
+// console.log( esUltimoCaracter('lovelace', 'f') // false
+// )
 
-
-
-
-
-
-// esUltimoCaracter('lovelace', 'e') // true
-// esUltimoCaracter('lovelace', 'f') // false
 // esContraseniaValida(contrasenia)
 // Crear una función esValida que tome como argumento una contrasenia (string) y devuelva true si tiene 8 caracteres o más o false si tienen menos de 8 caracteres
 
-// esValida('contraseniaMuySegura') // true
-// esValida('abc123') // false
+function esValida(string){
+    if(string.length < 8){
+        return false
+    } else {
+        return true
+    }
+}
+
+
+// console.log(esValida('contraseniaMuySegura'))
+// console.log(esValida('abc123'))
+
+
 // sonIguales(a, b)
 // Crear una función sonIguales que tome como argumentos dos strings a y b y devuelva true si ambos strings tienen el mismo contenido independientes del caso y false en caso contrario.
+    function sonIguales(a, b){
+        return a.length === b.length
+    }
+
+    // console.log(sonIguales('NO ESTOY GRITANDO', 'ESTOY GRITANDO'));
+    // console.log(sonIguales('AdA LoVeLaCe', 'Ada Lovelace'))
 
 // sonIguales('javascript', 'JavaScript') // true
 // sonIguales('AdA LoVeLaCe', 'Ada Lovelace') // true
 // sonIguales('NO ESTOY GRITANDO', 'ESTOY GRITANDO') // false
+
 // contarPalabras(str)
 // Crear una función contarPalabras que tome como argumento un string str y devuelva la cantidad de palabras que posee
+function contarPalabras(str){
+    return str.split(/\s+/).length;
+}
 
-// contarPalabras('javascript') // 1
-// contarPalabras('ada lovelace') // 2
-// contarPalabras('si debuggear es el proceso de remover bugs, programar es el proceso de agregarlos') // 14
+
+console.log( contarPalabras('javascript'))
+console.log(contarPalabras('javascript'))// 1
+console.log(contarPalabras('ada lovelace')) // 2
+console.log(contarPalabras('si debuggear es el proceso de remover bugs, programar es el proceso de agregarlos')) // 14
 // burlarse(str)
 // Crear una función burlarse que tome como argumento un string str y devuelva el mismo string con todas las vocales reemplazadas por la letra i
 
-// burlarse('programar es dificil') // 'prigimir is dificil'
+function burlarse(str){
+    return str.replace(/[aeiou]/gi, "i");
+}
+
+
+console.log(burlarse('programar es dificil')) // 'prigimir is dificil'
 // esFraccionMayorAUno(fraccion)
 // Crear una función esFraccionMayorAUno que tome como argumento un string fraccion (en el formato 'numerador/denominador') y devuelva true si dicha fracción es mayor a 1 o false de lo contrario
 
