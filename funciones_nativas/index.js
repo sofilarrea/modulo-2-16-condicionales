@@ -73,17 +73,31 @@ function burlarse(str){
 
 
 console.log(burlarse('programar es dificil')) // 'prigimir is dificil'
+
 // esFraccionMayorAUno(fraccion)
 // Crear una función esFraccionMayorAUno que tome como argumento un string fraccion (en el formato 'numerador/denominador') y devuelva true si dicha fracción es mayor a 1 o false de lo contrario
+function esFraccionMayorAUno(fraccion){
+    let separar = fraccion.split('/')
+    const numerador = parseInt(separar[0]);
+    const denominador = parseInt(separar[1]);
+    return numerador / denominador > 1;
+}
 
-// esFraccionMayorAUno('1/2') // false
-// esFraccionMayorAUno('2/2') // false
-// esFraccionMayorAUno('4/2') // true
+
+console.log(esFraccionMayorAUno('1/2'))
+console.log(esFraccionMayorAUno('2/2'))
+console.log(esFraccionMayorAUno('4/2'))
+
 // capitalizar(str)
 // Crear una función capitalizar que tome como argumento un string str y devuelva el mismo string con la primera letra en mayúscula
+function capitalizar(str){
+    return str.charAt(0).toUpperCase() + str.slice(1);
+}
 
-// capitalizar('lovelace') // 'Lovelace'
-// capitalizar('había una vez...') // 'Había una vez...'
+console.log(capitalizar('lovelace'))
+console.log(capitalizar('había una vez...'))
+
+
 // aHackerSpeak(str)
 // Crear una función aHackerSpeak que tome como argumento un string str y el mismo string convertido a H4CK3R 5P3AK, siguiendo las siguientes reglas:
 
