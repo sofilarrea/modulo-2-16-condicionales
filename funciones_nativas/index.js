@@ -127,6 +127,17 @@ console.log(aHackerSpeak('ADA LOVELACE')); // '4D4 L0V3L4C3'
 
 // obtenerPrimeraOracion('A mí no me preguntes, sólo soy una oración') // 'A mí no me preguntes, sólo soy una oración'
 // obtenerPrimeraOracion('Tengo varias oraciones. Esta es la segunda. Y esta es la tercera.') // 'Tengo varias oraciones.'
+
+function obtenerPrimeraOracion(str){
+    let primer = str.match(/^[^.,!?]+[.,!?]/);
+    if(primer){
+        return primer[0]
+    } else{
+        return "";
+    }
+}
+console.log(obtenerPrimeraOracion('A mí no me preguntes, sólo soy una oración')); // 'A mí no me preguntes, sólo soy una oración'
+console.log(obtenerPrimeraOracion('Tengo varias oraciones. Esta es la segunda. Y esta es la tercera.')); // 'Tengo varias oraciones.'
 // ocultarContrasenia(contrasenia)
 // Crear una función ocultarContraseña que tome como argumento una contrasenia de solo numeros y devuelva un string con dicha contraseña ocultada con astericos *, es decir, un string con la misma longitud donde todos sus caracteres son astericos
 
