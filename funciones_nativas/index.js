@@ -140,7 +140,17 @@ console.log(obtenerPrimeraOracion('A mí no me preguntes, sólo soy una oración
 console.log(obtenerPrimeraOracion('Tengo varias oraciones. Esta es la segunda. Y esta es la tercera.')); // 'Tengo varias oraciones.'
 // ocultarContrasenia(contrasenia)
 // Crear una función ocultarContraseña que tome como argumento una contrasenia de solo numeros y devuelva un string con dicha contraseña ocultada con astericos *, es decir, un string con la misma longitud donde todos sus caracteres son astericos
+    function ocultarContrasenia(password){
+        password = password.toString();
+        if(!password){
+            console.log("ingresa contraseña válida")
+        } else {
+            return "*".repeat(password.length);
+        }
+    }
 
+
+    console.log(ocultarContrasenia(123456))
 // ocultarContrasenia(123456) // '******'
 // ocultarContrasenia(111222333) // '*********'
 // espaciarCaracteres(str)
